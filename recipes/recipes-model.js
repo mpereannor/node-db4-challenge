@@ -9,7 +9,8 @@ module.exports = {
 function getRecipes(){ 
     return db('recipes')
 }
-/*
+
+
 function getShoppingList(recipe_id) {
     return db('recipes')
 }
@@ -18,4 +19,4 @@ function getShoppingList(recipe_id) {
 function getShoppingList(recipe_id) {
     return db('recipes')
 }
-*/
+
