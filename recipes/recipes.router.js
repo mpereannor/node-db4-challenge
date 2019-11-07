@@ -16,5 +16,17 @@ router.get('/', (req, res) =>{
     })
 });
 
-
+// GET /api/recipes/:id/shoppingList
+router.get('/:id/shoppingList' ,(req, res) => {
+    const {recipe_id} = req.params;
+    Recipes.getShoppingList(recipe_id)
+    .then(shoplist => { 
+        res.json(shoplist);
+    })
+    .catch(error => {
+        res.status(500).json(
+            'failed to get list' + error.message
+        )
+    })
+});
 module.exports = router;
