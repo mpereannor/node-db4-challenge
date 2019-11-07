@@ -39,11 +39,5 @@ function getShoppingList(recipe_id) {
         'i.ingredient_name as ingredientName',
         'i.ingredient_qty as ingredientQty'
         )
-   .where('ri.scheme_id', recipe_id)
+    .where('ri.recipe_id', recipe_id)
 }
-
-
-function getShoppingList(recipe_id) {
-    return db('recipes')
-}
-

@@ -17,9 +17,9 @@ router.get('/', (req, res) =>{
 });
 
 // GET /api/recipes/:id/shoppingList
-router.get('/:id/shoppingList' ,(req, res) => {
-    const {recipe_id} = req.params;
-    Recipes.getShoppingList(recipe_id)
+router.get('/:id/shoppinglist' ,(req, res) => {
+    const {id} = req.params;
+    Recipes.getShoppingList(id)
     .then(shoplist => { 
         res.json(shoplist);
     })
